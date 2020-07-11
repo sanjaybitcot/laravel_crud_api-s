@@ -35,7 +35,8 @@ protected $policies = [
 -> Add code insdie function boot() 
  Passport::routes(); 
 
-## configuration file , replace below array in config/auth.php
+## configuration file , replace below array in config/auth.php <br>
+```
 'guards' => [
     'web' => [
         'driver' => 'session',
@@ -47,3 +48,4 @@ protected $policies = [
         'provider' => 'users',
     ],
 ],
+```
