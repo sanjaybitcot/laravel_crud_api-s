@@ -7,19 +7,46 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+## Passport Intrigate in laravel 7
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Passport Intrigation in laravel 7
+1) Installation packege
+composer require laravel/passport
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+2) Run Migration and Install
+php artisan migrate
+php artisan passport:install
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+client secret 1 : rgUXY0wALLQB0OMbUewveHJHUX6apyJjXihvAaxN
+client secret 2 : OsEDMyb7Y95K7GuYuvMp7hOyM04YVEcSZUiRDuXJ
+
+3) Passport configration in model app/User.php
+Add code
+use Laravel\Passport\HasApiTokens;
+use HasApiTokens; // inside class
+
+4) Passport configration in app\Providers\AuthServiceProvider.php
+
+Add Code 
+-> use Laravel\Passport\Passport;
+->uncomment code: protected $policies = [
+        'App\Model' => 'App\Policies\ModelPolicy',//Passport configration
+    ];
+-> Passport::routes(); 
+
+5) configuration file  in config/auth.php
+Replace array
+'guards' => [
+    'web' => [
+        'driver' => 'session',
+        'provider' => 'users',
+    ],
+
+    'api' => [
+        'driver' => 'passport',
+        'provider' => 'users',
+    ],
+],
 
 ## Learning Laravel
 
