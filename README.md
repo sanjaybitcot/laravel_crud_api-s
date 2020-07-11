@@ -10,30 +10,44 @@
 ## Passport Intrigate in laravel 7 Follow below Steps
 
 ## Installation packege
+```
 composer require laravel/passport
+```
 
 ## Run Migration and Install
+```
 php artisan migrate
 php artisan passport:install
+```
 
 ## Passport configration for model app/User.php
--> Add below code in file
+-> Add below code in file <br>
+```
 use Laravel\Passport\HasApiTokens;//Passport configration
+```
 
--> Replace code instend of use HasApiTokens;
+-> Replace code instend of use HasApiTokens;<br>
+```
 use HasApiTokens, Notifiable;//Passport configration
+```
 
 ## Passport configration for provider app\Providers\AuthServiceProvider.php
 
--> Add below code 
+-> Add below code <br>
+```
 use Laravel\Passport\Passport;//Passport configration
+```
 
--> Replace below code
+-> Replace below code <br>
+```
 protected $policies = [
         'App\Model' => 'App\Policies\ModelPolicy',//Passport configration
-    ]; 
--> Add code insdie function boot() 
+    ];
+```     
+-> Add code insdie function boot() <br>
+```
  Passport::routes(); 
+```
 
 ## configuration file , replace below array in config/auth.php <br>
 ```
