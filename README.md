@@ -73,7 +73,7 @@ php artisan ui vue --auth
 If not install node then first intall node From
 link: https://nodejs.org/en/download/ then run below command
 
-## install node packages <br>
+## run below command <br>
 ```
 npm install
 npm run dev
