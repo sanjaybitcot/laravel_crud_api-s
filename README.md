@@ -78,6 +78,7 @@ link: https://nodejs.org/en/download/ then run below command
 npm install
 npm run dev
 ```
+## Now you can registration new user login
 
 
 
