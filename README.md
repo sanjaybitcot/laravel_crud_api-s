@@ -73,7 +73,7 @@ php artisan ui vue --auth
 If not install node then first intall node From
 link: https://nodejs.org/en/download/ then run below command
 
-## For Enable Authentication <br>
+## install node packages <br>
 ```
 npm install
 npm run dev
