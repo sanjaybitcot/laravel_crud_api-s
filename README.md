@@ -70,3 +70,14 @@ composer require laravel/ui
 
 php artisan ui vue --auth
 ```
+If not install node then first intall node From
+link: https://nodejs.org/en/download/ then run below command
+
+## For Enable Authentication <br>
+```
+npm install
+npm run dev
+```
+
+
+
