@@ -63,3 +63,10 @@ protected $policies = [
     ],
 ],
 ```
+
+## For Enable Authentication <br>
+```
+composer require laravel/ui
+
+php artisan ui vue --auth
+```
